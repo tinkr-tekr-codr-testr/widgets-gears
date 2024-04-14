@@ -1,0 +1,1 @@
+export type StimSet = Map<string, Array<string>>;

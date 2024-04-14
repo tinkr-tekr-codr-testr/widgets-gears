@@ -1,4 +1,5 @@
 import {Observable} from 'rxjs';
+import { selectFrom } from './utils';
 
 export const Stim = (beacon: Observable<number>, index: number, payload: string[])=>{
   const stimStream = Observable.create(function(observer){
@@ -13,7 +14,3 @@ export const Stim = (beacon: Observable<number>, index: number, payload: string[
 
 }
 
-export const selectFrom = (payload: string[]) => {
-  const index = Math.floor(Math.random() * payload.length);
-  return payload[index];
-};
